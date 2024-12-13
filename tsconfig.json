@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./src", // Define "src" como base para caminhos relativos
+    "paths": {
+      "*": ["*"], // Garante que todos os caminhos relativos no "src" sejam resolvidos
+      "test/*": ["../test/*"] // Suporte para a estrutura de testes
+    },
+    "allowJs": true, // Permite importar arquivos JavaScript
+    "module": "commonjs", // Define o sistema de módulos como CommonJS (compatível com Node.js)
+    "target": "es6", // Define o nível do código JavaScript para ES6
+    "strict": true, // Ativa verificações estritas de tipo
+    "outDir": "./dist", // Diretório de saída para os arquivos compilados
+    "esModuleInterop": true, // Suporte para interoperabilidade com módulos ES6
+    "resolveJsonModule": true, // Permite importar arquivos JSON
+    "skipLibCheck": true, // Ignora problemas de tipos em módulos externos
+    "experimentalDecorators": true, // Habilita suporte a decoradores
+    "emitDecoratorMetadata": true // Emite metadados para decoradores (útil em inversify)
+  },
+  "include": [
+    "src/**/*", // Inclui todos os arquivos TypeScript na pasta src
+    "test/**/*" // Inclui todos os arquivos TypeScript na pasta test
+  ],
+  "exclude": [
+    "node_modules", // Exclui dependências externas
+    "dist" // Exclui arquivos compilados
+  ]
+}
